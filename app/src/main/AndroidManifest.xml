@@ -13,6 +13,20 @@
         android:theme="@style/Theme.DBOperations"
         tools:targetApi="31">
         <activity
+            android:name=".DeleteOperation"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".UpdateOperation"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DisplayOperation"
             android:exported="false">
             <meta-data

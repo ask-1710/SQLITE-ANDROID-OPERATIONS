@@ -49,6 +49,18 @@ public class DBManager {
         return cursor;
     }
 
+    public int update(long _id, String name, String address, String phone, String email) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DatabaseHelper.NAME, name);
+        contentValues.put(DatabaseHelper.ADDRESS, address);
+        contentValues.put(DatabaseHelper.PHONE, phone);
+        contentValues.put(DatabaseHelper.EMAIL, email);
+        int i = database.update(DatabaseHelper.TABLE_NAME, contentValues, DatabaseHelper._ID + " = " + _id, null);
+        return i;
+    }
 
+    public void delete(long _id) {
+        database.delete(DatabaseHelper.TABLE_NAME, DatabaseHelper._ID + "=" + _id, null);
+    }
 }
 
